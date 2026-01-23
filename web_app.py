@@ -25,7 +25,9 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 openai.api_key = OPENAI_API_KEY
-logger.add(BASE_DIR / "web_bot.log", rotation="10 MB")
+import sys
+logger.remove()
+logger.add(sys.stderr, level="INFO")
 
 # SQLAlchemy setup - compatible with Python 3.14
 engine = create_engine(f'sqlite:///{BASE_DIR / "stores_new.db"}', echo=False)
@@ -42,7 +44,10 @@ class Store(Base):
     item_limit = Column(String, nullable=False)
     notes = Column(String, nullable=False)
 
-Base.metadata.create_all(engine)
+try:
+    Base.metadata.create_all(engine)
+except Exception as e:
+    logger.warning(f"Metadata creation failed (likely read-only DB): {e}")
 
 CATEGORY_MAPPING = {
     "electronics": [
@@ -94,38 +99,54 @@ for c in COUNTRIES:
             country_data[c] = json.load(f)
 
 def populate_db_once():
-    session = Session()
-    if session.query(Store).count() > 0:
-        session.close()
-        return
-    logger.info("Populating database with SQLAlchemy...")
-    for country_key, data in country_data.items():
-        ccode = country_key.upper()
-        for category in data.get("categories", []):
-            cname = category.get("category_name", "Unknown")
-            for s in category.get("stores", []):
+    try:
+        session = Session()
+        # Check if we can read from the DB
+        try:
+            if session.query(Store).count() > 0:
+                session.close()
+                return
+        except Exception as e:
+            logger.warning(f"Could not query database (might be uninitialized or read-only): {e}")
+            session.close()
+            return
+
+        logger.info("Populating database with SQLAlchemy...")
+        for country_key, data in country_data.items():
+            ccode = country_key.upper()
+            for category in data.get("categories", []):
+                cname = category.get("category_name", "Unknown")
+                for s in category.get("stores", []):
+                    store = Store(
+                        name=s.get("store", "Unnamed"),
+                        category=cname,
+                        country=ccode,
+                        price_limit=s.get("price_limit", "N/A"),
+                        item_limit=s.get("item_limit", "N/A"),
+                        notes=s.get("notes", "N/A"),
+                    )
+                    session.add(store)
+            for s in data.get("global_stores_and_services", []):
                 store = Store(
                     name=s.get("store", "Unnamed"),
-                    category=cname,
+                    category="Global Stores and Services",
                     country=ccode,
                     price_limit=s.get("price_limit", "N/A"),
                     item_limit=s.get("item_limit", "N/A"),
                     notes=s.get("notes", "N/A"),
                 )
                 session.add(store)
-        for s in data.get("global_stores_and_services", []):
-            store = Store(
-                name=s.get("store", "Unnamed"),
-                category="Global Stores and Services",
-                country=ccode,
-                price_limit=s.get("price_limit", "N/A"),
-                item_limit=s.get("item_limit", "N/A"),
-                notes=s.get("notes", "N/A"),
-            )
-            session.add(store)
-    session.commit()
-    session.close()
-    logger.info("DB population complete.")
+        session.commit()
+        session.close()
+        logger.info("DB population complete.")
+    except Exception as e:
+        logger.error(f"Failed to populate DB (likely read-only filesystem): {e}")
+
+# Only create tables if we are not in a read-only context (crude check) or just try/except it
+try:
+    Base.metadata.create_all(engine)
+except Exception:
+    logger.warning("Could not create tables (likely read-only DB)")
 
 populate_db_once()
 
