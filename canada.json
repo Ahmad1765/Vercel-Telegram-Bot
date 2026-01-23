@@ -1,0 +1,442 @@
+{
+  "header": {
+    "title": "CANADA STORES",
+    "last_updated": "Nov 17, 2024",
+    "info_link": "View rules"
+  },
+  "list_columns": [
+    "Stores",
+    "Price limits",
+    "Items limits",
+    "20% Fee",
+    "Time",
+    "Notes"
+  ],
+  "global_stores_and_services": [
+    {
+      "store": "redacted store",
+      "price_limit": "€20,000 limit",
+      "item_limit": "5 item limit",
+      "approx_time": "5-7 Days",
+      "notes": "Working globally, REFUND/REPLACEMENT (NO RESHIP). Contact us to learn name of store. (THIS is only for those who have had prior deals with us)"
+    },
+    {
+      "store": "STUBHUB",
+      "price_limit": "$7,000",
+      "item_limit": "8 TICKETS",
+      "approx_time": "INSTANT",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "KLARNA",
+      "price_limit": "NO LIMITS",
+      "approx_time": "14-21 Days",
+      "notes": "Any store that accepts Klarna"
+    },
+    {
+      "store": "GOOGLESTORE",
+      "price_limit": "$2,000",
+      "item_limit": "2 item",
+      "notes": "MUST OLD GMAIL – 80% success rate"
+    },
+    {
+      "store": "PAYPAL",
+      "price_limit": "$20,000",
+      "item_limit": "NO LIMIT",
+      "approx_time": "24 HOURS",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "CRYPTO REFUNDS",
+      "price_limit": "NO LIMIT",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "HOTELS.COM / INSIDER REFUNDS",
+      "price_limit": "NO LIMIT",
+      "notes": "PAY ONLINE – INFORM ONCE BOOKED"
+    }
+  ],
+  "categories": [
+    {
+      "category_name": "ELECTRONICS / HIGHLY RESELLABLE ITEMS",
+      "stores": [
+        {
+          "store": "Anker",
+          "price_limit": "$2,000",
+          "item_limit": "5 Items",
+          "approx_time": "7-10 Days"
+        },
+        {
+          "store": "Eufy/Seenebula",
+          "price_limit": "$3,000",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "BlackandDecker.com",
+          "price_limit": "No limit",
+          "item_limit": "2-3 items",
+          "approx_time": "1 weeks"
+        },
+        {
+          "store": "SharkClean",
+          "price_limit": "$5,000",
+          "item_limit": "10 items",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "SteelSeries",
+          "price_limit": "$3,000",
+          "item_limit": "2 items",
+          "approx_time": "Instant or 2 weeks"
+        },
+        {
+          "store": "Arlo",
+          "price_limit": "$1,500",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Dyson",
+          "price_limit": "$4,000",
+          "item_limit": "4 items",
+          "approx_time": "2 Weeks",
+          "notes": "(Testing)"
+        },
+        {
+          "store": "Canon.com",
+          "price_limit": "$3,000",
+          "item_limit": "1-2 item",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "LG.com",
+          "price_limit": "$2,000",
+          "approx_time": "1-2 weeks",
+          "notes": "(no freight)"
+        },
+        {
+          "store": "KitchenAid CA",
+          "price_limit": "$1,000",
+          "item_limit": "4 Items",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "Microsoft CA",
+          "price_limit": "$5,000",
+          "item_limit": "2 Items",
+          "approx_time": "1-3 Weeks"
+        },
+        {
+          "store": "Ledger CA",
+          "price_limit": "$1,000",
+          "item_limit": "5 Items",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "Lenovo CA",
+          "price_limit": "$5,000",
+          "item_limit": "1 Item",
+          "approx_time": "1-3 Weeks",
+          "notes": "NOTIFY IN TRASNIT"
+        },
+        {
+          "store": "Asics",
+          "price_limit": "$2,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Insight CA",
+          "price_limit": "$5,000",
+          "item_limit": "1-2 Items",
+          "approx_time": "1-2 Weeks",
+          "notes": "No 3rd Party Sellers | No Custom Orders | Must be returnable"
+        },
+        {
+          "store": "WesternDigital",
+          "price_limit": "$5,000",
+          "item_limit": "No item limit",
+          "approx_time": "3 weeks"
+        },
+        {
+          "store": "Ring.ca",
+          "price_limit": "NO LIMIT",
+          "approx_time": "3-5 Days"
+        },
+        {
+          "store": "iRobot.ca",
+          "price_limit": "NO LIMIT",
+          "approx_time": "1-2 weeks"
+        }
+      ]
+    },
+    {
+      "category_name": "CLOTHING / HOME",
+      "stores": [
+        {
+          "store": "Atmosphere.ca (sports)",
+          "price_limit": "$2,000",
+          "approx_time": "2-4 Weeks"
+        },
+        {
+          "store": "Marks.com",
+          "price_limit": "$3,000",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "ShopFinalCut.com",
+          "price_limit": "$3,000",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Sportchek.ca",
+          "price_limit": "$2,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "MooseKnucles",
+          "item_limit": "1 item",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Prohockeylife.com",
+          "price_limit": "$1,000",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "SilverPaws.com",
+          "price_limit": "$1,000",
+          "item_limit": "10 items",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "Vitalydesign.com",
+          "price_limit": "$500",
+          "item_limit": "5 items",
+          "approx_time": "1-7 days"
+        },
+        {
+          "store": "Fanatics",
+          "price_limit": "no limits",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "Unitedbyblue",
+          "price_limit": "NO LIMIT",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "Duckworth Co",
+          "price_limit": "$800",
+          "item_limit": "No Item Limit",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Ralph Lauren",
+          "price_limit": "NO LIMIT",
+          "approx_time": "INSTANT"
+        },
+        {
+          "store": "Guess CA",
+          "price_limit": "$2,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "CanadaGoose",
+          "price_limit": "$3,000",
+          "item_limit": "2 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Gymshark CA",
+          "price_limit": "NO LIMIT",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Klipsch CA",
+          "price_limit": "$2,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "2-3 Weeks",
+          "notes": "Must Be Returnable | No Final Sale Items"
+        },
+        {
+          "store": "Lululemon CA",
+          "price_limit": "$1,000",
+          "item_limit": "20 Items",
+          "approx_time": "7 days",
+          "notes": "No Final Sale Items"
+        },
+        {
+          "store": "GAP / Banana Republic",
+          "price_limit": "NO LIMIT",
+          "approx_time": "Instant refunds"
+        },
+        {
+          "store": "Arcteryx",
+          "price_limit": "$2,000",
+          "item_limit": "5 items",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "ABERCROMBIE",
+          "price_limit": "$5,000",
+          "item_limit": "20 items",
+          "approx_time": "1-2 week"
+        },
+        {
+          "store": "Lacoste",
+          "price_limit": "$3,000",
+          "item_limit": "Multiple",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Sunglass Hut",
+          "price_limit": "$2,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "WORLDWIDE",
+          "approx_time": "Instant refunds"
+        },
+        {
+          "store": "Hollister",
+          "price_limit": "No limit",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide"
+        },
+        {
+          "store": "Calvin Klein",
+          "price_limit": "$5,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Tommy Hilfiger",
+          "price_limit": "$5,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Merrel CA",
+          "price_limit": "$500",
+          "item_limit": "No Item Limit",
+          "approx_time": "2-5 Days"
+        },
+        {
+          "store": "Ohsnap CA",
+          "price_limit": "$500",
+          "item_limit": "No Item Limit",
+          "approx_time": "5-7 Days"
+        },
+        {
+          "store": "Public Rec CA",
+          "price_limit": "$3,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "2-5 Days"
+        },
+        {
+          "store": "RTIC Outdoors CA",
+          "price_limit": "$750",
+          "item_limit": "No Item Limit",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Shein CA",
+          "price_limit": "$1,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "2-5 Days"
+        },
+        {
+          "store": "H&M",
+          "price_limit": "$1,000",
+          "item_limit": "No item limit",
+          "approx_time": "3 days"
+        },
+        {
+          "store": "Solo stove CA",
+          "price_limit": "$2,000",
+          "item_limit": "5 Items",
+          "approx_time": "2-5 Day"
+        },
+        {
+          "store": "Victorias Secret CA",
+          "price_limit": "$3,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "INSTANTS"
+        },
+        {
+          "store": "bohooMAN",
+          "price_limit": "No limit",
+          "approx_time": "2 week"
+        },
+        {
+          "store": "ToryBurch",
+          "price_limit": "NO LIMIT",
+          "approx_time": "14 Days"
+        },
+        {
+          "store": "Columbia",
+          "price_limit": "$1,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "approx_time": "1-2 weeks"
+        }
+      ]
+    },
+    {
+      "category_name": "HOME / FURNITURE",
+      "stores": [
+        {
+          "store": "ParachuteHome",
+          "price_limit": "No limit",
+          "approx_time": "7 day"
+        },
+        {
+          "store": "Westcoastseeds.com",
+          "price_limit": "$3,000",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Monos CA",
+          "price_limit": "$3,000",
+          "item_limit": "5 Items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Herman Miller CA",
+          "item_limit": "1 Items",
+          "approx_time": "1 Week",
+          "notes": "(replacement only in some cases)"
+        },
+        {
+          "store": "NectarSleep.ca",
+          "price_limit": "NO LIMIT",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "YETI.ca",
+          "price_limit": "$3,000",
+          "item_limit": "No item limit",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Autonomous.ai",
+          "item_limit": "2 items",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "COOP Sleep Goods CA",
+          "price_limit": "$2,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "2-5 Days",
+          "notes": "Must Be Returnable | No Final Sale"
+        }
+      ]
+    }
+  ]
+}

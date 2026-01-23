@@ -1,0 +1,429 @@
+{
+  "header": {
+    "title": "UK STORE LIST",
+    "last_updated": "Nov 17, 2024",
+    "info_link": "View rules"
+  },
+  "list_columns": [
+    "Stores",
+    "Price limits",
+    "Items limits",
+    "20% Fee",
+    "Time",
+    "Notes"
+  ],
+  "global_stores_and_services": [
+    {
+      "store": "PAYPAL",
+      "price_limit": "$20,000",
+      "item_limit": "NO LIMIT",
+      "approx_time": "24 HOURS",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "STUBHUB",
+      "price_limit": "$7,000",
+      "item_limit": "8 TICKETS",
+      "approx_time": "INSTANT",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "KLARNA",
+      "price_limit": "NO LIMITS",
+      "approx_time": "14-21 Days",
+      "notes": "Any store that accepts Klarna"
+    },
+    {
+      "store": "HOTELS.COM / INSIDER REFUNDS",
+      "price_limit": "NO LIMIT",
+      "notes": "PAY ONLINE – INFORM ONCE BOOKED. 1K$ MINIMUM"
+    },
+    {
+      "store": "redacted store",
+      "price_limit": "€20,000 limit",
+      "item_limit": "5 item limit",
+      "approx_time": "5-7 Days",
+      "notes": "Working globally across EU, REFUND/REPLACEMENT (NO RESHIP). Contact us to learn name of store. (THIS is only for those who have had prior deals with us)"
+    }
+  ],
+  "categories": [
+    {
+      "category_name": "ELECTRONICS / HIGH RESELL ITEMS",
+      "stores": [
+        {
+          "store": "META",
+          "price_limit": "£2,000 limit",
+          "item_limit": "3 item limit",
+          "fee_percent": "20%",
+          "approx_time": "5-14 days"
+        },
+        {
+          "store": "store.nintendo.co.uk",
+          "price_limit": "$2,500",
+          "item_limit": "5-6 items",
+          "approx_time": "1-3 weeks"
+        },
+        {
+          "store": "en-uk.ring.com",
+          "price_limit": "$5,000",
+          "item_limit": "4-5 items",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Eufy",
+          "price_limit": "£3,000",
+          "item_limit": "4 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Anker",
+          "price_limit": "£3,000",
+          "item_limit": "4 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Backmarket",
+          "price_limit": "£1,000 limit",
+          "approx_time": "7-14 days"
+        },
+        {
+          "store": "Playstation Direct Store",
+          "price_limit": "£1,500",
+          "item_limit": "3 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Microsoft",
+          "price_limit": "£6,000",
+          "item_limit": "2 items",
+          "approx_time": "2 Days OR Weeks"
+        },
+        {
+          "store": "eBay",
+          "price_limit": "£5,000",
+          "item_limit": "2 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(SAME SELLER ONLY)"
+        },
+        {
+          "store": "Lenovo",
+          "price_limit": "NO LIMIT",
+          "item_limit": "1-2 items",
+          "approx_time": "INSTANT or 2 Weeks"
+        },
+        {
+          "store": "store.nintendo.co.uk",
+          "price_limit": "$2,500",
+          "item_limit": "5-6 items",
+          "approx_time": "1-3 weeks"
+        }
+      ]
+    },
+    {
+      "category_name": "CLOTHING",
+      "stores": [
+        {
+          "store": "Suitsupply",
+          "price_limit": "£2,000",
+          "item_limit": "No item limit",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "m.aboutyou.com",
+          "price_limit": "£1,500",
+          "item_limit": "15 items",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Axelarigato.com/Axel Arigato",
+          "price_limit": "£3,000",
+          "item_limit": "10 items",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "Tommy Hilfiger",
+          "price_limit": "£2,000",
+          "item_limit": "25 items",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Victoria’s Secret",
+          "price_limit": "£3,000",
+          "item_limit": "15 items",
+          "fee_percent": "20%",
+          "approx_time": "Instant – 10 days"
+        },
+        {
+          "store": "Perfume Direct",
+          "price_limit": "£1,000",
+          "item_limit": "8 item",
+          "approx_time": "14 Days"
+        },
+        {
+          "store": "GymShark",
+          "price_limit": "NO LIMIT",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "RayBan",
+          "price_limit": "£2,500",
+          "item_limit": "15 items",
+          "approx_time": "5-15 Days"
+        },
+        {
+          "store": "Freshcotton.com",
+          "price_limit": "£1,500",
+          "item_limit": "15 items",
+          "approx_time": "3-4 Weeks"
+        },
+        {
+          "store": "Size.co.uk",
+          "price_limit": "£1,500",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Carl Friedrik",
+          "price_limit": "£1,500",
+          "item_limit": "2 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Lululemon",
+          "price_limit": "£1,000",
+          "item_limit": "10 item",
+          "approx_time": "5-14 Days"
+        },
+        {
+          "store": "Ralph Lauren",
+          "price_limit": "£2,000",
+          "item_limit": "5 items",
+          "approx_time": "1 Week"
+        },
+        {
+          "store": "SEVENSTORE",
+          "price_limit": "£1,000 limit",
+          "item_limit": "no item limit",
+          "approx_time": "instant refund",
+          "notes": "20% min £100 fee."
+        },
+        {
+          "store": "THE HIP STORE",
+          "price_limit": "£1,500 limit",
+          "item_limit": "no item limit",
+          "approx_time": "instant refund"
+        },
+        {
+          "store": "MONCLER",
+          "price_limit": "£5,000",
+          "item_limit": "5 items",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "SHEIN",
+          "price_limit": "£2,000 limit",
+          "item_limit": "no item limit",
+          "approx_time": "instant"
+        },
+        {
+          "store": "BULKSUPPLEMENTS",
+          "price_limit": "£500",
+          "item_limit": "No item limit"
+        },
+        {
+          "store": "Adidas",
+          "price_limit": "£1,000 limit",
+          "approx_time": "7-14 days"
+        },
+        {
+          "store": "Size",
+          "price_limit": "£950 limit",
+          "approx_time": "5-10 days"
+        },
+        {
+          "store": "JD Sports",
+          "price_limit": "£2,500 limit",
+          "approx_time": "7-14 days"
+        },
+        {
+          "store": "On Running",
+          "price_limit": "£1,500 limit",
+          "approx_time": "5-14 days"
+        },
+        {
+          "store": "Michal kors",
+          "price_limit": "£1,500 limit",
+          "approx_time": "14-25 days"
+        },
+        {
+          "store": "Notino",
+          "price_limit": "£900 limit",
+          "approx_time": "3-7 days"
+        },
+        {
+          "store": "Cex",
+          "price_limit": "£1,500",
+          "item_limit": "1 item",
+          "approx_time": "3-7 days"
+        },
+        {
+          "store": "Represent cloths",
+          "price_limit": "£1,000 limit",
+          "approx_time": "7-14 days"
+        },
+        {
+          "store": "Flannels",
+          "price_limit": "£1,000 limit",
+          "item_limit": "2 items",
+          "approx_time": "7-14 days"
+        },
+        {
+          "store": "Tiffany",
+          "price_limit": "£2,000",
+          "item_limit": "3 items"
+        },
+        {
+          "store": "ARNE",
+          "price_limit": "£1,500",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "NICCE",
+          "price_limit": "£1,500",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "Free People",
+          "price_limit": "£2,000",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "Allbeauty",
+          "price_limit": "£2,000",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "Valentino",
+          "price_limit": "£2,000",
+          "item_limit": "30 items"
+        },
+        {
+          "store": "Debenhams",
+          "price_limit": "£2,000",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "Palm Angels",
+          "price_limit": "£2,000",
+          "item_limit": "30 items"
+        },
+        {
+          "store": "Polyanpyret",
+          "price_limit": "£1,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "ClubHouse Golf",
+          "price_limit": "£1,000",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "Calvin Klein",
+          "price_limit": "£3,000",
+          "item_limit": "25 items"
+        },
+        {
+          "store": "Sunglasses Hut",
+          "price_limit": "£1,500",
+          "item_limit": "2 items"
+        },
+        {
+          "store": "TomFord",
+          "price_limit": "£1,500",
+          "item_limit": "1 item"
+        },
+        {
+          "store": "PacoRabanne",
+          "price_limit": "£1,000",
+          "item_limit": "4 items"
+        },
+        {
+          "store": "Parkem",
+          "price_limit": "£1,000",
+          "item_limit": "3 items"
+        },
+        {
+          "store": "Thehipstore",
+          "price_limit": "£2,000",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "Next UK",
+          "price_limit": "$1,000",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "Aldi",
+          "price_limit": "£1,500",
+          "item_limit": "3 items"
+        },
+        {
+          "store": "Mulberry",
+          "price_limit": "£1,000",
+          "item_limit": "3 items"
+        },
+        {
+          "store": "LibertyLondon",
+          "price_limit": "£1,000",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "Lucafaloni",
+          "price_limit": "£1,500",
+          "item_limit": "4 items"
+        }
+      ]
+    },
+    {
+      "category_name": "JEWELERY",
+      "stores": [
+        {
+          "store": "Maisonmiru.com",
+          "price_limit": "£1,000",
+          "approx_time": "7 Days"
+        },
+        {
+          "store": "Astridandmiyu.com",
+          "price_limit": "£1,500",
+          "approx_time": "7 Days"
+        }
+      ]
+    },
+    {
+      "category_name": "❄️OUTDOOR / FOOD ❄️",
+      "stores": [
+        {
+          "store": "Selfridges.com",
+          "price_limit": "£750",
+          "approx_time": "2 Weeks",
+          "notes": "(NO ELECTRONICS)"
+        },
+        {
+          "store": "Animal.co.uk",
+          "price_limit": "£800",
+          "item_limit": "4 items",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Muscleandstrength.com",
+          "price_limit": "£1,000",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "eu.gregorypacks.com",
+          "price_limit": "£1,000",
+          "approx_time": "2 Weeks"
+        }
+      ]
+    }
+  ]
+}

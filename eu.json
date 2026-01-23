@@ -1,0 +1,527 @@
+{
+  "header": {
+    "title": "EU STORE LIST",
+    "last_updated": "Nov 17, 2024",
+    "info_link": "View rules"
+  },
+  "list_columns": [
+    "Stores",
+    "Price limits",
+    "Items limits",
+    "Fee (%)",
+    "Time",
+    "Notes"
+  ],
+  "global_stores_and_services": [
+    {
+      "store": "PAYPAL",
+      "price_limit": "$20,000",
+      "item_limit": "NO LIMIT",
+      "approx_time": "24 HOURS",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "KLARNA",
+      "price_limit": "NO LIMITS",
+      "approx_time": "14-21 Days",
+      "notes": "Any store that accepts Klarna"
+    },
+    {
+      "store": "STUBHUB",
+      "price_limit": "$7,000",
+      "item_limit": "8 TICKETS",
+      "approx_time": "INSTANT",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "HOTELS.COM / INSIDER REFUNDS",
+      "price_limit": "NO LIMIT",
+      "notes": "PAY ONLINE – INFORM ONCE BOOKED. 1K$ MINIMUM"
+    },
+    {
+      "store": "redacted store",
+      "price_limit": "€20,000 limit",
+      "item_limit": "5 item limit",
+      "approx_time": "5-7 Days",
+      "notes": "Working globally across EU, REFUND/REPLACEMENT (NO RESHIP). Contact us to learn name of store. (THIS is only for those who have had prior deals with us)"
+    }
+  ],
+  "categories": [
+    {
+      "category_name": "ELECTRONICS & HIGH RESELL STORES",
+      "stores": [
+        {
+          "store": "BOL.com",
+          "price_limit": "€5,000",
+          "item_limit": "3 items",
+          "notes": "NL & BE ONLY (Place 3 small orders before or wait 3 months after creating account.)"
+        },
+        {
+          "store": "Canon",
+          "price_limit": "£5,000",
+          "item_limit": "3 items",
+          "approx_time": "2-4 Weeks"
+        },
+        {
+          "store": "Ring",
+          "price_limit": "€5,000",
+          "item_limit": "20 items",
+          "approx_time": "1-14 DAYS"
+        },
+        {
+          "store": "Lenovo",
+          "price_limit": "€5,000",
+          "item_limit": "2 items",
+          "approx_time": "14-21 days"
+        },
+        {
+          "store": "bax-shop.nl",
+          "price_limit": "€1,200",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "eBay",
+          "price_limit": "€5,000",
+          "item_limit": "3 items",
+          "fee_percent": "25%",
+          "approx_time": "1-2 Weeks",
+          "notes": "SAME SELLER ONLY"
+        },
+        {
+          "store": "Meta",
+          "price_limit": "€1,000",
+          "item_limit": "1-2 items",
+          "approx_time": "5-20 days"
+        },
+        {
+          "store": "Oculus",
+          "price_limit": "€1,000",
+          "item_limit": "1-2",
+          "approx_time": "5-20 days"
+        },
+        {
+          "store": "Bang-Olufsen",
+          "price_limit": "€5,000",
+          "item_limit": "5 items",
+          "approx_time": "10-20 days"
+        },
+        {
+          "store": "Bowers Wilkins",
+          "price_limit": "€5,000",
+          "item_limit": "5 items",
+          "approx_time": "10-20 days"
+        },
+        {
+          "store": "Microsoft",
+          "price_limit": "€6,000",
+          "item_limit": "2 items",
+          "approx_time": "2 Days or 2 weeks"
+        },
+        {
+          "store": "Anker",
+          "price_limit": "€3,000",
+          "item_limit": "3-4 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Eufy",
+          "price_limit": "€3,000",
+          "item_limit": "3-4 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Arlo",
+          "price_limit": "€1,000",
+          "item_limit": "5 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "LG .com",
+          "price_limit": "€2,000",
+          "item_limit": "2 items",
+          "approx_time": "1-3 weeks"
+        },
+        {
+          "store": "shop.samsonite.com",
+          "price_limit": "€2,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "store.nintendo",
+          "price_limit": "€1,500",
+          "item_limit": "4-5 items",
+          "approx_time": "1-2 Weeks"
+        },
+        {
+          "store": "Galaxus.de",
+          "price_limit": "€2,500",
+          "item_limit": "3-4 items",
+          "approx_time": "1-3 weeks"
+        },
+        {
+          "store": "WesternDigital.com",
+          "price_limit": "€2,000",
+          "item_limit": "3-4 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "NinjaKitchen",
+          "price_limit": "€2,000",
+          "item_limit": "1-2 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Notebooksbilliger.de",
+          "price_limit": "€2,500",
+          "item_limit": "1-2 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(Germany)"
+        },
+        {
+          "store": "caseking.de",
+          "price_limit": "€2,000",
+          "item_limit": "3-4 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(Germany)"
+        },
+        {
+          "store": "electronics.de",
+          "price_limit": "€2,000",
+          "item_limit": "2-3 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(Germany)"
+        },
+        {
+          "store": "Ao.de",
+          "price_limit": "€2,500",
+          "item_limit": "3-4 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(Germany)"
+        },
+        {
+          "store": "NutriBullet",
+          "price_limit": "€5,000",
+          "item_limit": "10 items",
+          "approx_time": "7 Days"
+        }
+      ]
+    },
+    {
+      "category_name": "JEWELRY",
+      "stores": [
+        {
+          "store": "Jaxxon",
+          "price_limit": "$1,500",
+          "item_limit": "5-10 items",
+          "notes": "(Jewelry)"
+        }
+      ]
+    },
+    {
+      "category_name": "CLOTHING",
+      "stores": [
+        {
+          "store": "Zara",
+          "price_limit": "€3,000",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "Adidas",
+          "price_limit": "€1,000",
+          "item_limit": "30 items"
+        },
+        {
+          "store": "Lyleandscott.com",
+          "price_limit": "€1,000",
+          "approx_time": "2-5 days"
+        },
+        {
+          "store": "yfood.com",
+          "price_limit": "€700",
+          "approx_time": "2 days"
+        },
+        {
+          "store": "en.parfumdreams.de",
+          "price_limit": "€500",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Pangaia.com",
+          "price_limit": "€1,000",
+          "approx_time": "5 days"
+        },
+        {
+          "store": "Lululemon",
+          "price_limit": "€1,000"
+        },
+        {
+          "store": "CanadaGoose.com",
+          "price_limit": "€3,000",
+          "approx_time": "3 weeks"
+        },
+        {
+          "store": "Gymshark",
+          "price_limit": "No Limits"
+        },
+        {
+          "store": "eu.Stussy.com",
+          "price_limit": "€1,500",
+          "approx_time": "10 days"
+        },
+        {
+          "store": "BestSecretEU",
+          "price_limit": "€500",
+          "approx_time": "1-6 days"
+        },
+        {
+          "store": "Ubiquity",
+          "price_limit": "€2,000",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "Bang-Olufsen",
+          "price_limit": "€3,000",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "Bergfreunde",
+          "price_limit": "€1,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "Ralph Lauren",
+          "price_limit": "NO LIMIT"
+        },
+        {
+          "store": "Bowers Wilkins",
+          "price_limit": "€3,000",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "Skims",
+          "price_limit": "€2,000",
+          "item_limit": "10 Articles"
+        },
+        {
+          "store": "Lacoste",
+          "price_limit": "€1,000",
+          "item_limit": "15 Articles"
+        },
+        {
+          "store": "ASOS",
+          "price_limit": "€1,500",
+          "item_limit": "20 Articles"
+        },
+        {
+          "store": "Tumi",
+          "price_limit": "€1,000",
+          "item_limit": "2 items"
+        },
+        {
+          "store": "Puma",
+          "price_limit": "€1,000",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "H&M",
+          "price_limit": "€1,000",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "Victorias Secret",
+          "price_limit": "€2,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "Blissenergetics",
+          "price_limit": "€1,500",
+          "item_limit": "15 items"
+        },
+        {
+          "store": "RayBan",
+          "price_limit": "No price limits",
+          "item_limit": "2 items"
+        },
+        {
+          "store": "Abercrombie & Fitch",
+          "price_limit": "No limits"
+        },
+        {
+          "store": "Sephora",
+          "price_limit": "€700",
+          "item_limit": "5 Articles"
+        },
+        {
+          "store": "Arcteryx",
+          "price_limit": "€1,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "Calvin Klein",
+          "price_limit": "€3,000",
+          "item_limit": "25 items",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Tommy Hilfiger",
+          "price_limit": "€2,000",
+          "item_limit": "25 items",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "GymShark",
+          "price_limit": "NO LIMIT",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Moncler",
+          "price_limit": "€5,000",
+          "item_limit": "5 items",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "JDSports",
+          "price_limit": "€2,000",
+          "item_limit": "20 items",
+          "approx_time": "10-20 Days"
+        },
+        {
+          "store": "AboutYou (3500+ Brands)",
+          "price_limit": "€2,000",
+          "item_limit": "20 items",
+          "approx_time": "10-20 Days"
+        }
+      ]
+    },
+    {
+      "category_name": "NETHERLANDS CLOTHING",
+      "stores": [
+        {
+          "store": "Millet",
+          "price_limit": "€1,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "Arcteryx",
+          "price_limit": "€1,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "DrMartens",
+          "price_limit": "€1,500",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "BOOTZ",
+          "price_limit": "€900",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "G-Star Raw",
+          "price_limit": "€1,500",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "RevolutionRace",
+          "price_limit": "€1,500",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "ibood",
+          "price_limit": "€1,500",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "Richesse",
+          "price_limit": "€1,000",
+          "item_limit": "5 items"
+        },
+        {
+          "store": "Sarenza",
+          "price_limit": "€1,300",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "XLMoto",
+          "price_limit": "€1,000",
+          "item_limit": "20 items"
+        },
+        {
+          "store": "Justbrands",
+          "price_limit": "€1,000",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "On-Running",
+          "price_limit": "€1,000",
+          "item_limit": "10 items"
+        },
+        {
+          "store": "Conrad",
+          "price_limit": "€1,500",
+          "item_limit": "1 item"
+        }
+      ]
+    },
+    {
+      "category_name": "FRANCE CLOTHING",
+      "stores": [
+        {
+          "store": "Devialet",
+          "price_limit": "€902",
+          "item_limit": "1 Article"
+        },
+        {
+          "store": "Armaniexchange",
+          "price_limit": "€1,500",
+          "item_limit": "10 Articles"
+        },
+        {
+          "store": "Asics",
+          "price_limit": "€1,500",
+          "item_limit": "10 Articles"
+        },
+        {
+          "store": "idkids",
+          "price_limit": "€1,000",
+          "item_limit": "5 Articles"
+        },
+        {
+          "store": "Moulinex",
+          "price_limit": "€2,000",
+          "item_limit": "5 articles"
+        },
+        {
+          "store": "Conrad",
+          "price_limit": "€1,500",
+          "item_limit": "1 article"
+        },
+        {
+          "store": "MotoBlouz",
+          "price_limit": "€1,000",
+          "item_limit": "5 articles"
+        },
+        {
+          "store": "Laredoute",
+          "price_limit": "€1,000",
+          "item_limit": "1 Article"
+        },
+        {
+          "store": "Kiabi",
+          "price_limit": "€1,000",
+          "item_limit": "10 Articles"
+        },
+        {
+          "store": "Mango",
+          "price_limit": "€1,500",
+          "item_limit": "10 Articles"
+        },
+        {
+          "store": "Bershka",
+          "price_limit": "€1,000",
+          "item_limit": "10 Articles"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1257 @@
+{
+  "header": {
+    "title": "USA STORE LIST",
+    "last_updated": "Nov 17, 2024",
+    "info_link": "View rules"
+  },
+  "list_columns": [
+    "Stores",
+    "Price limits",
+    "Items limits",
+    "Fee (%)",
+    "Region",
+    "Approximate time",
+    "Notes"
+  ],
+  "global_stores_and_services": [
+    {
+      "store": "PAYPAL",
+      "price_limit": "$20,000",
+      "item_limit": "NO LIMIT",
+      "approx_time": "24 HOURS",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "CRYPTO REFUNDS",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "STUBHUB",
+      "price_limit": "$7,000",
+      "item_limit": "8 TICKETS",
+      "approx_time": "INSTANT",
+      "notes": "CLICK TO VIEW INSTRUCTIONS"
+    },
+    {
+      "store": "HOTELS.COM / INSIDER REFUNDS",
+      "price_limit": "NO LIMIT",
+      "notes": "PAY ONLINE – INFORM ONCE BOOKED. 1K$ MINIMUM"
+    },
+    {
+      "store": "TIKTOK Shop",
+      "price_limit": "$5,000",
+      "item_limit": "1 item",
+      "notes": "HAS PC’S, Camera, DJI, Laptop & more"
+    },
+    {
+      "store": "GOOGLESTORE",
+      "price_limit": "$2,000",
+      "item_limit": "2 item",
+      "notes": "MUST OLD GMAIL – 80% success rate"
+    }
+  ],
+  "categories": [
+    {
+      "category_name": "🎮 ELECTRONICS & HIGH RESELL STORES 💸",
+      "stores": [
+        {
+          "store": "jawa.gg",
+          "price_limit": "$2,000",
+          "item_limit": "2 Item Limit",
+          "fee_percent": "20%",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "BREITLING",
+          "item_limit": "1 Watch",
+          "fee_percent": "30%",
+          "approx_time": "14 days",
+          "notes": "Luxury watch store"
+        },
+        {
+          "store": "Apple.com",
+          "item_limit": "1 item",
+          "notes": "(double/tripple dip) *contact before ordering*"
+        },
+        {
+          "store": "Sam’s Club",
+          "price_limit": "$5,000",
+          "item_limit": "1 unique item (multiple qnty is OK)",
+          "notes": "Double/triple dip"
+        },
+        {
+          "store": "Office Depot",
+          "price_limit": "NO LIMITS",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "SurLaTable.com",
+          "price_limit": "$3,000",
+          "item_limit": "1 item",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Lenovo.com",
+          "item_limit": "1 item",
+          "approx_time": "INSTANT replacements"
+        },
+        {
+          "store": "GetSuperNatural",
+          "item_limit": "1-2 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(META VR Headsets)"
+        },
+        {
+          "store": "Westerndigital.com",
+          "price_limit": "$2,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Arlo.com",
+          "price_limit": "$2,500",
+          "item_limit": "No item limit",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "WellBots",
+          "price_limit": "$4,000",
+          "item_limit": "2 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "BlackandDecker",
+          "price_limit": "No limit",
+          "notes": "HIGH resell on: Cocktail Mixer"
+        },
+        {
+          "store": "JustMac",
+          "price_limit": "$5,000",
+          "item_limit": "1 item",
+          "approx_time": "1-2 weeks",
+          "notes": "(Apple products)"
+        },
+        {
+          "store": "Corsair",
+          "price_limit": "$2,000",
+          "item_limit": "5 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "NinjaKitchen",
+          "price_limit": "$2,000",
+          "item_limit": "5 items",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Verizon",
+          "price_limit": "$2,000",
+          "item_limit": "1 item",
+          "approx_time": "1 Week"
+        },
+        {
+          "store": "Zoro",
+          "price_limit": "$1,000 Limit",
+          "approx_time": "2-3 Weeks"
+        },
+        {
+          "store": "WOOT.com",
+          "price_limit": "$5,000",
+          "item_limit": "2 items"
+        },
+        {
+          "store": "RING.com",
+          "price_limit": "NO LIMIT",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "BambuLab",
+          "price_limit": "$2,000",
+          "item_limit": "1 item",
+          "notes": "3d printer ONLY"
+        },
+        {
+          "store": "Samsung",
+          "price_limit": "$10,000",
+          "item_limit": "10 items",
+          "approx_time": "INSTANT",
+          "notes": "No phones / NO Freight / TV’s; Do not turn on the devices until refund is generated."
+        },
+        {
+          "store": "PlayStation Store",
+          "price_limit": "$1,500",
+          "item_limit": "3 item (double dips)",
+          "region": "USA/CA/UK/NL",
+          "approx_time": "14 days",
+          "notes": "(Only physical item)"
+        },
+        {
+          "store": "Harman Audio",
+          "price_limit": "$1,500 limit",
+          "item_limit": "5 items limit",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "namawell.com",
+          "price_limit": "no limit",
+          "approx_time": "1-2 weeks",
+          "notes": "(blenders & juicers high resell)"
+        },
+        {
+          "store": "Rode.com",
+          "price_limit": "$2,000",
+          "approx_time": "1-2 weeks",
+          "notes": "(high resell Microphones)"
+        },
+        {
+          "store": "AudioAdvisor.com",
+          "price_limit": "$1,500",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Anker",
+          "price_limit": "$2,000",
+          "item_limit": "2-3 items",
+          "region": "WORLDWIDE",
+          "approx_time": "1-2 weeks",
+          "notes": "(HIGH RESELL)"
+        },
+        {
+          "store": "Eufy",
+          "price_limit": "$2,000",
+          "item_limit": "2-3 items OR 1 bundle",
+          "region": "WORLDWIDE",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Crate & Barrel",
+          "price_limit": "$5,000",
+          "item_limit": "2-3 item",
+          "approx_time": "1 Week",
+          "notes": "(No freight) (EXTREMLY HIGH RESELL/CASHOUT)"
+        },
+        {
+          "store": "Seenebula.com",
+          "price_limit": "$5,000 Limit",
+          "item_limit": "2 items",
+          "fee_percent": "20%",
+          "approx_time": "2 weeks",
+          "notes": "(All items doable / repeatable)"
+        },
+        {
+          "store": "iRobot.com",
+          "price_limit": "NO LIMIT",
+          "region": "WORLDWIDE",
+          "approx_time": "3-5 days",
+          "notes": "(beta)"
+        }
+      ]
+    },
+    {
+      "category_name": "High-end MATTRESSES",
+      "stores": [
+        {
+          "store": "NectarSleep.com",
+          "price_limit": "No limit",
+          "region": "USA & CA",
+          "approx_time": "Instant",
+          "notes": "[HIGH RESELL/DIPS POSSIBLE]"
+        },
+        {
+          "store": "Purple.com",
+          "item_limit": "1 Mattress",
+          "region": "USA & CA",
+          "approx_time": "3-5 days",
+          "notes": "[HIGH RESELL/DIPS POSSIBLE]"
+        }
+      ]
+    },
+    {
+      "category_name": "CLOTHING",
+      "stores": [
+        {
+          "store": "Gunnar",
+          "price_limit": "$1,000 limit",
+          "item_limit": "10 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Fresh Clean Tees",
+          "price_limit": "$1,500",
+          "approx_time": "2-3 days"
+        },
+        {
+          "store": "Keen Footwear",
+          "price_limit": "$1,000 limit",
+          "item_limit": "10 items",
+          "approx_time": "5-7 days"
+        },
+        {
+          "store": "Bootbarn",
+          "price_limit": "$2,000",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Mizzen + Main",
+          "price_limit": "$2,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Fair Harbor",
+          "price_limit": "$1,500",
+          "approx_time": "2-3 days",
+          "notes": "(Beach/Summer)"
+        },
+        {
+          "store": "Alex Crane",
+          "price_limit": "$1,500 limit",
+          "item_limit": "10 items",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "Kulani Kinis",
+          "price_limit": "$1,000 limit",
+          "item_limit": "10 item",
+          "approx_time": "5-7 days"
+        },
+        {
+          "store": "Onia",
+          "price_limit": "$1,000",
+          "item_limit": "10 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Melin",
+          "price_limit": "$1,000",
+          "item_limit": "15 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Moscot",
+          "price_limit": "$1,000 limit",
+          "item_limit": "5 items",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Kotn",
+          "price_limit": "$1,500 limit",
+          "item_limit": "15 items",
+          "approx_time": "5-7 days"
+        },
+        {
+          "store": "ShopBOB",
+          "price_limit": "$2,000",
+          "item_limit": "1 item",
+          "approx_time": "INSTANT",
+          "notes": "(Designer clothing)"
+        },
+        {
+          "store": "Ralph Lauren",
+          "price_limit": "$8,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "Lululemon",
+          "price_limit": "$1,300",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "J. Crew",
+          "price_limit": "$2,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "USA",
+          "approx_time": "1-2 Week"
+        },
+        {
+          "store": "Banana Republic",
+          "price_limit": "NO LIMIT",
+          "fee_percent": "20%",
+          "region": "USA",
+          "approx_time": "Instant refunds"
+        },
+        {
+          "store": "ToryBurch",
+          "price_limit": "NO LIMIT",
+          "region": "Worldwide",
+          "approx_time": "14 Days"
+        },
+        {
+          "store": "Youngla",
+          "price_limit": "No limit",
+          "region": "( USA )"
+        },
+        {
+          "store": "Uniqlo",
+          "price_limit": "$500",
+          "approx_time": "7-14 days"
+        },
+        {
+          "store": "WearFigs",
+          "price_limit": "No limit",
+          "region": "(USA)"
+        },
+        {
+          "store": "Playboy Store",
+          "price_limit": "No limit",
+          "region": "( USA )"
+        },
+        {
+          "store": "H&M",
+          "price_limit": "$1,000",
+          "item_limit": "No limit",
+          "approx_time": "2-3 Days"
+        },
+        {
+          "store": "bohooMAN",
+          "price_limit": "No limit",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "stussy.com",
+          "price_limit": "$1,500",
+          "approx_time": "3-5 days",
+          "notes": "(USA)"
+        },
+        {
+          "store": "Koio",
+          "price_limit": "$2,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Coach",
+          "price_limit": "$2,000",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Kosas",
+          "price_limit": "$700",
+          "approx_time": "INSTANT"
+        },
+        {
+          "store": "Make Up by Mario",
+          "price_limit": "$500 limit",
+          "item_limit": "20 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(repeatable)"
+        },
+        {
+          "store": "Hourglass",
+          "price_limit": "$1,000 limit",
+          "item_limit": "20 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Vessi.com",
+          "price_limit": "$1,500",
+          "approx_time": "3-5 Days",
+          "notes": "(USA)"
+        },
+        {
+          "store": "Zara.com",
+          "price_limit": "$1,000 (could be more)",
+          "approx_time": "2-3 Days"
+        },
+        {
+          "store": "Bonobos.com",
+          "price_limit": "no limit",
+          "approx_time": "1-3 days"
+        },
+        {
+          "store": "madhappy.com",
+          "price_limit": "NO limits",
+          "approx_time": "under a week",
+          "notes": "No final sale items"
+        },
+        {
+          "store": "Sunglass Hut",
+          "price_limit": "$2,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Hollister",
+          "price_limit": "No limit",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide"
+        },
+        {
+          "store": "Stair slide",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Atlas Stationers",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Shady Rays",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "United By Blue",
+          "price_limit": "$1,500",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7 days",
+          "notes": "repeatable"
+        },
+        {
+          "store": "GlassesUSA",
+          "price_limit": "NO LIMIT",
+          "approx_time": "1 week",
+          "notes": "around 55% resell"
+        },
+        {
+          "store": "MontecWear",
+          "price_limit": "$2,000",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Fragrance.net",
+          "price_limit": "$500",
+          "approx_time": "Instant",
+          "notes": "Replacement + Refund"
+        },
+        {
+          "store": "Nearly Natural",
+          "price_limit": "No limit",
+          "approx_time": "2-3 days"
+        },
+        {
+          "store": "Ten Thousand",
+          "price_limit": "$1,500",
+          "approx_time": "2-3 days"
+        },
+        {
+          "store": "Calvin Klein",
+          "price_limit": "$5,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Tommy Hilfiger",
+          "price_limit": "$5,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "2-3 weeks"
+        },
+        {
+          "store": "Victoria’s Secret",
+          "price_limit": "$3,000",
+          "item_limit": "15 items",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "Instant – 10 days"
+        },
+        {
+          "store": "Suitshop.com",
+          "price_limit": "$2,000 max",
+          "item_limit": "20 Item Limit",
+          "approx_time": "1 -5 Days",
+          "notes": "Great for Gifts Potential"
+        },
+        {
+          "store": "47brand.com",
+          "price_limit": "$1,000 Limit",
+          "item_limit": "15 Item Limit",
+          "approx_time": "3 -5 Days",
+          "notes": "No Final Sale"
+        },
+        {
+          "store": "Birkenstock.com",
+          "price_limit": "$1,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "American Eagle",
+          "price_limit": "$2,000 item",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "USA",
+          "approx_time": "Instant refunds"
+        },
+        {
+          "store": "EVO",
+          "price_limit": "$1,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "USA",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Lacoste",
+          "price_limit": "$5,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Estee Lauder",
+          "price_limit": "$1,500",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "US",
+          "approx_time": "Instant refunds"
+        },
+        {
+          "store": "Allbeauty",
+          "price_limit": "$800 USA / UK £5,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "approx_time": "US Instant/ UK 10 days"
+        },
+        {
+          "store": "Shein",
+          "price_limit": "$1,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "refunds"
+        },
+        {
+          "store": "RayBan",
+          "price_limit": "$1,000",
+          "item_limit": "1/2 item",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "3-15 days"
+        }
+      ]
+    },
+    {
+      "category_name": "HOME GOODS",
+      "stores": [
+        {
+          "store": "HermanMiller.com",
+          "price_limit": "$5,000",
+          "item_limit": "1 item",
+          "region": "USA/CA",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "Lomi",
+          "price_limit": "No limit",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "WolfGourmet.com",
+          "price_limit": "$1,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "CliveCoffee.com",
+          "price_limit": "$1,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "CookUnity.com",
+          "price_limit": "$500",
+          "approx_time": "1-7 Days"
+        },
+        {
+          "store": "Sok-it.com",
+          "price_limit": "$500",
+          "approx_time": "instant"
+        },
+        {
+          "store": "Drinkcirkul.com",
+          "price_limit": "$500",
+          "item_limit": "10 items",
+          "approx_time": "2-5 days"
+        },
+        {
+          "store": "LLBean.com",
+          "price_limit": "$1,000",
+          "approx_time": "2 Weeks"
+        },
+        {
+          "store": "Hotel Collection",
+          "price_limit": "$1,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Onsen",
+          "price_limit": "$1,000 limit",
+          "item_limit": "10 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(repeatable)"
+        },
+        {
+          "store": "ANOVA Culinary",
+          "price_limit": "$1,500 limit",
+          "item_limit": "5 items",
+          "approx_time": "1-2 weeks",
+          "notes": "(repeatable)"
+        },
+        {
+          "store": "autonomous.ai",
+          "price_limit": "no limit",
+          "approx_time": "5-10 days",
+          "notes": "reship works"
+        },
+        {
+          "store": "LOVESAC",
+          "price_limit": "$10,000",
+          "item_limit": "No Item Limit",
+          "approx_time": "1-2 Week refunds",
+          "notes": "Stereo sofas, beds, bean bags and much more!"
+        },
+        {
+          "store": "Fluff Co",
+          "price_limit": "$1,000",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Brooklinen",
+          "price_limit": "$2,000",
+          "item_limit": "no item limit",
+          "approx_time": "7 – 10 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Bigblanket.com",
+          "price_limit": "$2,000",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "LunaBlanket.com",
+          "price_limit": "NO LIMIT",
+          "approx_time": "3-5 days"
+        },
+        {
+          "store": "NectarSleep",
+          "price_limit": "NO LIMIT",
+          "approx_time": "3 – 5 days"
+        },
+        {
+          "store": "MONOS.com",
+          "price_limit": "NO LIMIT"
+        },
+        {
+          "store": "Temu.com",
+          "price_limit": "No limit",
+          "approx_time": "1-3 Weeks"
+        },
+        {
+          "store": "ParachuteHome",
+          "price_limit": "NO LIMIT",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "fromourplace.com",
+          "price_limit": "$2,000 max",
+          "item_limit": "10 Item Limit",
+          "region": "(USA/CA)",
+          "approx_time": "3- 5 Days"
+        },
+        {
+          "store": "Madeincookware.com",
+          "price_limit": "$2,000 Limit",
+          "item_limit": "10 Item Limit",
+          "approx_time": "5 – 7 Days",
+          "notes": "No Final sale, no collectible, no engraved, no limited edition."
+        },
+        {
+          "store": "Crate & Barrel",
+          "price_limit": "NO limit",
+          "item_limit": "1-3 items",
+          "approx_time": "1-2 weeks",
+          "notes": "no final sale, repeatable (High resell/cashout on Breville & Jura GIGA)"
+        },
+        {
+          "store": "Coop Home Goods",
+          "price_limit": "$2,000",
+          "item_limit": "no item limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Home Depot",
+          "price_limit": "$10,000",
+          "item_limit": "no item limit",
+          "notes": "items must say can be returned to homedepot.com, NO freight"
+        },
+        {
+          "store": "Ruggable",
+          "price_limit": "$3,000",
+          "item_limit": "3",
+          "approx_time": "7 -10 days",
+          "notes": "no final sale, no furniture, repeatable"
+        },
+        {
+          "store": "Yankee candle",
+          "price_limit": "$1,000",
+          "item_limit": "25",
+          "approx_time": "1 – 3 days",
+          "notes": "any items, repeatable"
+        },
+        {
+          "store": "Hunter Fans",
+          "price_limit": "$10,000",
+          "item_limit": "10",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Stasher Containers",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "W&P",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Food52",
+          "price_limit": "$5,000",
+          "item_limit": "3 items",
+          "approx_time": "7 – 10 days",
+          "notes": "repeatable"
+        },
+        {
+          "store": "Surlatable",
+          "price_limit": "$3,000",
+          "item_limit": "1",
+          "approx_time": "3 – 5 days",
+          "notes": "any item (Has Breville/Jura Giga – HIGH CASHOUT)"
+        },
+        {
+          "store": "Over Stock (also now Bed, Bath, and Beyond)",
+          "price_limit": "under $500 is fast, else $1,000",
+          "item_limit": "3 items",
+          "approx_time": "5 – 7 days",
+          "notes": "no third party, repeatable"
+        },
+        {
+          "store": "Mypillow",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Zip Top",
+          "price_limit": "$1,000",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7",
+          "notes": "no final sale, repeatable"
+        }
+      ]
+    },
+    {
+      "category_name": "SPORTS / OUTDOOR",
+      "stores": [
+        {
+          "store": "Fanatics ( USA )",
+          "price_limit": "No limit",
+          "notes": "repeatable, no custom items or collectibles"
+        },
+        {
+          "store": "Malbon Golf",
+          "price_limit": "$1,500",
+          "item_limit": "10 items",
+          "approx_time": "5-7 days"
+        },
+        {
+          "store": "Sergio Tacchini",
+          "price_limit": "$1,000",
+          "item_limit": "10 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "CMC MotorSport",
+          "price_limit": "$2,000 limit",
+          "item_limit": "15 items",
+          "approx_time": "5-7 days"
+        },
+        {
+          "store": "Stix.golf",
+          "price_limit": "$2,000",
+          "item_limit": "5 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Amersports.com",
+          "price_limit": "$3,000",
+          "item_limit": "10 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "RogueFitness",
+          "price_limit": "$1,000",
+          "item_limit": "10 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "BlackandDecker",
+          "price_limit": "No limit",
+          "notes": "HIGH resell on: Cocktail Mixer"
+        },
+        {
+          "store": "Columbia",
+          "price_limit": "$1,000",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Gymshark",
+          "price_limit": "NO LIMIT",
+          "fee_percent": "20%",
+          "region": "Worldwide",
+          "approx_time": "Instant refunds"
+        },
+        {
+          "store": "686.com",
+          "price_limit": "$2,000",
+          "approx_time": "2-3 weeks",
+          "notes": "(skiing gear)"
+        },
+        {
+          "store": "Puma ( USA )",
+          "price_limit": "No limit"
+        },
+        {
+          "store": "Arcteryx",
+          "price_limit": "No limit",
+          "item_limit": "Multiple",
+          "fee_percent": "20%",
+          "region": "USA / CA",
+          "approx_time": "Instant – 10 days"
+        },
+        {
+          "store": "Duluth Trading",
+          "price_limit": "$2,000",
+          "item_limit": "no item limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Traeger.com",
+          "price_limit": "$5,000",
+          "item_limit": "1 item",
+          "approx_time": "2-3 Weeks",
+          "notes": "(Wood fired grills)"
+        },
+        {
+          "store": "Olightstore.com",
+          "price_limit": "$2,500",
+          "approx_time": "1-2 weeks",
+          "notes": "(Outdoor lights)"
+        },
+        {
+          "store": "Tennis-Warehouse.com",
+          "price_limit": "$1,500 limit",
+          "item_limit": "10 items",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "CallAwayGolf",
+          "price_limit": "$5,000",
+          "item_limit": "10 items",
+          "notes": "NO Final Sale / Bundles Allowed"
+        },
+        {
+          "store": "Eddie Bauer",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Gear",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "igloocoolers.com",
+          "price_limit": "$1,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "Woodscanada",
+          "price_limit": "$1,000",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Warstic",
+          "price_limit": "$1,000",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Wildly Weak Coolers",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Escape Outdoors",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Doc Ortho",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Bauer",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Impala Rollerskates",
+          "price_limit": "$1,000",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "47 Brand",
+          "price_limit": "$1,500",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7 days",
+          "notes": "repeatable, no custom items or collectibles"
+        },
+        {
+          "store": "NFL/NHL/MLB",
+          "price_limit": "$1,500",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7 days",
+          "notes": "repeatable, no custom items or collectibles"
+        },
+        {
+          "store": "JD Sports",
+          "price_limit": "$1,000",
+          "item_limit": "no item limit",
+          "approx_time": "5 – 7 days",
+          "notes": "repeatable, no custom items or collectibles"
+        },
+        {
+          "store": "Primo Golf Apparel",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Cobra Golf",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Sanuk",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        },
+        {
+          "store": "Teva",
+          "price_limit": "$2,000",
+          "item_limit": "no limit",
+          "approx_time": "3 – 5 days",
+          "notes": "no final sale, repeatable"
+        }
+      ]
+    },
+    {
+      "category_name": "JEWELERY",
+      "stores": [
+        {
+          "store": "us.princesspolly.com",
+          "price_limit": "$5,000",
+          "item_limit": "No item limit",
+          "approx_time": "1-3 days"
+        },
+        {
+          "store": "Helzberg.com",
+          "price_limit": "$2,000",
+          "item_limit": "1 item",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "KateSpade.com",
+          "price_limit": "$2,000",
+          "item_limit": "3 items",
+          "approx_time": "2 weeks"
+        },
+        {
+          "store": "Petalandpup.com",
+          "price_limit": "$500",
+          "item_limit": "5 items",
+          "approx_time": "1 week"
+        },
+        {
+          "store": "JamesAvery.com",
+          "price_limit": "$1,000",
+          "item_limit": "1 item",
+          "approx_time": "2-3 days"
+        },
+        {
+          "store": "Analuisa.com",
+          "price_limit": "$1,500 limit",
+          "item_limit": "No item Limit",
+          "region": "(USA)",
+          "approx_time": "3-5 Days",
+          "notes": "(has amazing jewelry)"
+        },
+        {
+          "store": "Jaxxon.com",
+          "price_limit": "$10,000 Limit",
+          "item_limit": "Less Items the Best",
+          "region": "(USA)",
+          "notes": "HIGHLY RESELL-ABLE SOLID GOLD CHAINS"
+        },
+        {
+          "store": "studs.com",
+          "price_limit": "$3,000",
+          "item_limit": "No item limit",
+          "approx_time": "1-3 days"
+        }
+      ]
+    },
+    {
+      "category_name": "FOOD",
+      "stores": [
+        {
+          "store": "Vitamix",
+          "price_limit": "$1,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "BULKSUPPLEMENTS",
+          "price_limit": "$500",
+          "approx_time": "instant"
+        },
+        {
+          "store": "MyProtein",
+          "price_limit": "$500",
+          "approx_time": "instant"
+        },
+        {
+          "store": "Rysesupps.com",
+          "price_limit": "$600",
+          "approx_time": "instant"
+        },
+        {
+          "store": "VitalProteins.com",
+          "price_limit": "$500",
+          "approx_time": "1-7 days"
+        },
+        {
+          "store": "CliveCoffee.com",
+          "price_limit": "$1,000",
+          "approx_time": "1-2 weeks"
+        },
+        {
+          "store": "1800FLOWERS/ SHARIEBERRIES/ FRUITBOUQETTS",
+          "price_limit": "$500",
+          "item_limit": "No item limit",
+          "approx_time": "INSTANT",
+          "notes": "No 3rd party"
+        },
+        {
+          "store": "DoorDash/ Postmates/ Grubhub / UberEats",
+          "price_limit": "NO LIMIT",
+          "notes": "MUST be pickup order. Unlimited times per account"
+        },
+        {
+          "store": "OmahaSteaks",
+          "price_limit": "$900",
+          "item_limit": "Multiple items",
+          "notes": "NO Guest Order/ NO Alcohol"
+        },
+        {
+          "store": "Dartagnan.com",
+          "price_limit": "$500",
+          "item_limit": "Multiple items"
+        },
+        {
+          "store": "AMAZON FRESH/AMAZON WHOLEFOODS",
+          "price_limit": "$900 MAX",
+          "notes": "$50 PER ITEM MAX"
+        },
+        {
+          "store": "KROGER.COM DELIVERY",
+          "price_limit": "$300 MAX",
+          "notes": "$100 PER ITEM MAX, LIQUOR ALLOWED"
+        },
+        {
+          "store": "GOPUFF.COM",
+          "price_limit": "$400 MAX",
+          "item_limit": "NO item limit",
+          "notes": "LIQUOR ALLOWED / MUST NOT ASK FOR OTP"
+        },
+        {
+          "store": "Food52",
+          "price_limit": "NO LIMIT",
+          "notes": "Multiple times"
+        }
+      ]
+    },
+    {
+      "category_name": "MEAL PLANS",
+      "stores": [
+        {
+          "store": "BLUE APRON",
+          "item_limit": "1 MEAL KIT (SIZE/PORTIONS DON’T MATTER)",
+          "notes": "EASILY REPEATABLE! Buy For You service at 50% discounted rate also available."
+        },
+        {
+          "store": "MARLEYSPOON",
+          "item_limit": "1 MEAL KIT (SIZE/PORTIONS DON’T MATTER)",
+          "notes": "EASILY REPEATABLE! Buy For You service at 50% discounted rate also available."
+        },
+        {
+          "store": "DINNERLY",
+          "item_limit": "1 MEAL KIT (SIZE/PORTIONS DON’T MATTER)",
+          "notes": "EASILY REPEATABLE! Buy For You service at 50% discounted rate also available."
+        }
+      ]
+    }
+  ]
+}
