@@ -11,8 +11,6 @@ import openai
 from dotenv import load_dotenv
 from loguru import logger
 from pony.orm import Database, Required, db_session, select
-from sentence_transformers import SentenceTransformer
-from PyPDF2 import PdfReader
 import telebot
 from concurrent.futures import ThreadPoolExecutor
 
@@ -31,6 +29,10 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 openai.api_key = OPENAI_API_KEY
 bot = telebot.TeleBot(TELEGRAM_TOKEN, parse_mode="Markdown")
+# Set a longer timeout for internal bot operations to avoid ReadTimeout
+import telebot.apihelper
+telebot.apihelper.CONNECT_TIMEOUT = 30
+telebot.apihelper.READ_TIMEOUT = 30
 EXECUTOR = ThreadPoolExecutor(max_workers=6)
 logger.add(BASE_DIR / "bot.log", rotation="10 MB")
 
@@ -187,45 +189,50 @@ def improved_chunk_docx(path: Path, chunk_size: int = 600, overlap: int = 150) -
 
 # Load DOCX chunks
 if DOCX_PATH.exists():
-    pdf_chunks = improved_chunk_docx(DOCX_PATH)
-    logger.info(f"Loaded {len(pdf_chunks)} DOCX chunks")
+    docx_chunks = improved_chunk_docx(DOCX_PATH)
+    logger.info(f"Loaded {len(docx_chunks)} DOCX chunks")
 else:
-    pdf_chunks = []
+    docx_chunks = []
     logger.warning(f"DOCX not found at {DOCX_PATH}")
 
 # -------------------------
 # IMPROVED EMBEDDINGS
 # -------------------------
-if pdf_chunks:
+if docx_chunks:
     if EMB_NPY.exists():
-        pdf_embeddings = np.load(str(EMB_NPY))
-        logger.info(f"Loaded PDF embeddings from cache: {pdf_embeddings.shape}")
+        docx_embeddings = np.load(str(EMB_NPY))
+        logger.info(f"Loaded DOCX embeddings from cache: {docx_embeddings.shape}")
     else:
-        logger.info("Generating embeddings for PDF chunks...")
-        pdf_embeddings = []
+        logger.info("Generating embeddings for DOCX chunks...")
+        docx_embeddings = []
         batch_size = 50
         
-        for i in range(0, len(pdf_chunks), batch_size):
-            batch = pdf_chunks[i:i+batch_size]
+        for i in range(0, len(docx_chunks), batch_size):
+            batch = docx_chunks[i:i+batch_size]
             try:
+                # Increased timeout to 60s to avoid ReadTimeout on large batches or slow networks
                 response = openai.embeddings.create(
                     model="text-embedding-3-small",
-                    input=batch
+                    input=batch,
+                    timeout=60.0
                 )
                 for item in response.data:
                     emb = np.array(item.embedding, dtype=np.float32)
                     emb /= np.linalg.norm(emb)
-                    pdf_embeddings.append(emb)
+                    docx_embeddings.append(emb)
                 
-                logger.info(f"Processed {len(pdf_embeddings)}/{len(pdf_chunks)} chunks")
+                logger.info(f"Processed {len(docx_embeddings)}/{len(docx_chunks)} chunks")
             except Exception as e:
                 logger.exception(f"Failed embedding batch {i}: {e}")
         
-        pdf_embeddings = np.stack(pdf_embeddings)
-        np.save(str(EMB_NPY), pdf_embeddings)
-        logger.info(f"Generated and cached PDF embeddings: {pdf_embeddings.shape}")
+        if docx_embeddings:
+            docx_embeddings = np.stack(docx_embeddings)
+            np.save(str(EMB_NPY), docx_embeddings)
+            logger.info(f"Generated and cached DOCX embeddings: {docx_embeddings.shape}")
+        else:
+            docx_embeddings = None
 else:
-    pdf_embeddings = None
+    docx_embeddings = None
 
 CATEGORIES = ["ELECTRONICS", "CLOTHING", "JEWELRY"]
 
@@ -368,20 +375,21 @@ def semantic_search(query: str, top_k: int = 5, similarity_threshold: float = 0.
     - More results for context
     - Score filtering
     """
-    if not pdf_chunks or pdf_embeddings is None:
+    if not docx_chunks or docx_embeddings is None:
         return []
 
     try:
         # Get query embedding
         response = openai.embeddings.create(
             model="text-embedding-3-small",
-            input=query
+            input=query,
+            timeout=30.0
         )
         q_emb = np.array(response.data[0].embedding, dtype=np.float32)
         q_emb /= np.linalg.norm(q_emb)
 
         # Cosine similarity
-        sims = np.dot(pdf_embeddings, q_emb)
+        sims = np.dot(docx_embeddings, q_emb)
         
         # Filter by threshold and get top_k
         valid_indices = np.where(sims > similarity_threshold)[0]
@@ -394,7 +402,7 @@ def semantic_search(query: str, top_k: int = 5, similarity_threshold: float = 0.
             sorted_valid = valid_indices[sims[valid_indices].argsort()[::-1]]
             top_indices = sorted_valid[:top_k]
 
-        results = [(float(sims[i]), pdf_chunks[i]) for i in top_indices]
+        results = [(float(sims[i]), docx_chunks[i]) for i in top_indices]
         logger.info(f"Semantic search for '{query}' found {len(results)} results (scores: {[f'{s:.3f}' for s, _ in results]})")
         return results
 

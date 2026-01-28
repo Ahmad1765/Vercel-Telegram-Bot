@@ -5,9 +5,7 @@ python-dotenv
 loguru
 fuzzywuzzy
 python-Levenshtein
-# For main.py compatibility if needed later:
-# pyTelegramBotAPI
-# pony
-# numpy
-# sentence-transformers
-# pypdf2
+python-docx
+pony
+pyTelegramBotAPI
+numpy

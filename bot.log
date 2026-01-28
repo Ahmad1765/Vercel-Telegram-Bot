@@ -4,3 +4,23 @@
 2026-01-23 13:13:14.616 | INFO     | __main__:start_bot:683 - 🤖 Bot starting...
 2026-01-23 13:17:06.257 | WARNING  | __main__:<module>:191 - PDF not found at C:\Users\flylu\Downloads\Archive\answers.pdf
 2026-01-23 13:17:06.258 | INFO     | __main__:start_bot:683 - 🤖 Bot starting...
+2026-01-28 23:34:12.236 | INFO     | __main__:improved_chunk_docx:147 - Chunking DOCX with improved strategy...
+2026-01-28 23:34:14.431 | INFO     | __main__:improved_chunk_docx:183 - Created 292 DOCX chunks with overlap
+2026-01-28 23:34:14.432 | INFO     | __main__:<module>:189 - Loaded 292 DOCX chunks
+2026-01-28 23:34:14.432 | INFO     | __main__:<module>:202 - Generating embeddings for PDF chunks...
+2026-01-28 23:34:18.500 | INFO     | __main__:<module>:218 - Processed 50/292 chunks
+2026-01-28 23:34:20.624 | INFO     | __main__:<module>:218 - Processed 100/292 chunks
+2026-01-28 23:34:22.173 | INFO     | __main__:<module>:218 - Processed 150/292 chunks
+2026-01-28 23:34:23.701 | INFO     | __main__:<module>:218 - Processed 200/292 chunks
+2026-01-28 23:34:25.063 | INFO     | __main__:<module>:218 - Processed 250/292 chunks
+2026-01-28 23:34:26.619 | INFO     | __main__:<module>:218 - Processed 292/292 chunks
+2026-01-28 23:34:26.623 | INFO     | __main__:<module>:224 - Generated and cached PDF embeddings: (292, 1536)
+2026-01-28 23:34:26.624 | INFO     | __main__:start_bot:683 - 🤖 Bot starting...
+2026-01-28 23:35:27.731 | INFO     | __main__:improved_chunk_docx:144 - Loading cached DOCX chunks
+2026-01-28 23:35:27.748 | INFO     | __main__:<module>:189 - Loaded 292 DOCX chunks
+2026-01-28 23:35:27.765 | INFO     | __main__:<module>:200 - Loaded DOCX embeddings from cache: (292, 1536)
+2026-01-28 23:35:27.766 | INFO     | __main__:start_bot:689 - 🤖 Bot starting...
+2026-01-28 23:35:55.295 | INFO     | __main__:improved_chunk_docx:148 - Loading cached DOCX chunks
+2026-01-28 23:35:55.297 | INFO     | __main__:<module>:193 - Loaded 292 DOCX chunks
+2026-01-28 23:35:55.300 | INFO     | __main__:<module>:204 - Loaded DOCX embeddings from cache: (292, 1536)
+2026-01-28 23:35:55.301 | INFO     | __main__:start_bot:693 - 🤖 Bot starting...
