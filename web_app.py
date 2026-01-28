@@ -119,13 +119,33 @@ def ask_openai_with_context(query: str, contexts: List[str]) -> str:
         return "Sorry, I encountered an error while generating the answer."
 
 def classify_query_ai(text: str) -> str:
-    prompt = f"Classify this user query into one of two categories: STORE (user wants recommendations/links) or INFO (user wants info/policies).\n\nQuery: \"{text}\"\n\nAnswer with only: STORE or INFO"
+    prompt = f"Classify this user query into one of three categories: STORE (user wants recommendations/links), INFO (user wants specific info/policies from documents), or CHAT (general greetings, small talk, identity questions, or 'hello/hi').\n\nQuery: \"{text}\"\n\nAnswer with only: STORE, INFO, or CHAT"
     try:
-        resp = openai.chat.completions.create(model="gpt-4o-mini", messages=[{"role": "system", "content": "You are a classifier. Answer only with STORE or INFO."}, {"role": "user", "content": prompt}], max_tokens=5, temperature=0)
+        resp = openai.chat.completions.create(model="gpt-4o-mini", messages=[{"role": "system", "content": "You are a classifier. Answer only with STORE, INFO, or CHAT."}, {"role": "user", "content": prompt}], max_tokens=5, temperature=0)
         ans = resp.choices[0].message.content.strip().upper()
-        return "store" if "STORE" in ans else "info"
+        if "STORE" in ans: return "store"
+        if "CHAT" in ans: return "chat"
+        return "info"
     except Exception:
-        return "store" if any(k in text.lower() for k in ["store", "buy", "shop", "website"]) else "info"
+        # Fallback heuristics
+        text_lower = text.lower()
+        if any(k in text_lower for k in ["store", "buy", "shop", "website"]): return "store"
+        if any(k in text_lower for k in ["hello", "hi", "hey", "who are you", "what can you do"]): return "chat"
+        return "info"
+
+def handle_general_chat(query: str) -> str:
+    try:
+        system_msg = "You are a helpful assistant for a Store Bot. You help users find stores and provide information. Be friendly and concise. If the user asks what you can do, explain that you can recommend stores and answer questions about policies."
+        resp = openai.chat.completions.create(
+            model=OPENAI_MODEL,
+            messages=[{"role": "system", "content": system_msg}, {"role": "user", "content": query}],
+            temperature=0.7,
+            max_tokens=150,
+        )
+        return resp.choices[0].message.content.strip()
+    except Exception as e:
+        logger.exception(f"General chat failed: {e}")
+        return "Hello! I can help you find stores or answer policy questions."
 
 def classify_category(query: str) -> str:
     prompt = f"Classify query into categories: {', '.join(SIMPLE_CATEGORIES)}.\n\nQuery: \"{query}\"\n\nRespond only with category name (lowercase)."
@@ -194,6 +214,9 @@ def handle_msg(message):
                 bot.reply_to(message, f"🏬 {cat.title()} stores in {country}:\n\n{ranked}")
             else:
                 bot.reply_to(message, f"❌ No stores found for {cat} in {country}.")
+        elif query_type == "chat":
+            reply = handle_general_chat(text)
+            bot.reply_to(message, reply)
         else:
             results = semantic_search(text)
             if results:
@@ -470,6 +493,8 @@ def chat():
                 reply = f"🏬 {cat.title()} stores in {country}:\n\n{ranked}"
             else:
                 reply = f"❌ No stores found."
+        elif query_type == "chat":
+             reply = handle_general_chat(message)
         else:
             results = semantic_search(message)
             reply = ask_openai_with_context(message, [c for _, c in results]) if results else "I couldn't find info."
