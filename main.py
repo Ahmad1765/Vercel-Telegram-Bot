@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).parent
 CACHE_DIR = BASE_DIR / "cache"
 CACHE_DIR.mkdir(exist_ok=True)
 
-PDF_PATH = BASE_DIR / "answers.pdf"
+DOCX_PATH = BASE_DIR / "2.docx"
 COUNTRIES = ["eu", "uk", "usa", "canada"]
 
 load_dotenv()
@@ -131,30 +131,33 @@ populate_db_once()
 # -------------------------
 # IMPROVED PDF CHUNKING
 # -------------------------
-CHUNKS_PKL = CACHE_DIR / "pdf_chunks_v2.pkl"
-EMB_NPY = CACHE_DIR / "pdf_emb_v2.npy"
+CHUNKS_PKL = CACHE_DIR / "docx_chunks_v3.pkl"
+EMB_NPY = CACHE_DIR / "docx_emb_v3.npy"
 
-def improved_chunk_pdf(path: Path, chunk_size: int = 500, overlap: int = 100) -> List[str]:
+def improved_chunk_docx(path: Path, chunk_size: int = 600, overlap: int = 150) -> List[str]:
     """
-    Better chunking strategy:
-    - Splits by sentences/paragraphs
+    Better chunking strategy for DOCX:
+    - Uses python-docx to extract text
+    - Splits by paragraphs
     - Uses sliding window with overlap
     - Maintains context
     """
     if CHUNKS_PKL.exists():
-        logger.info("Loading cached PDF chunks")
+        logger.info("Loading cached DOCX chunks")
         return pickle.load(open(CHUNKS_PKL, "rb"))
     
-    logger.info("Chunking PDF with improved strategy...")
-    reader = PdfReader(str(path))
+    logger.info("Chunking DOCX with improved strategy...")
+    from docx import Document
+    
+    doc = Document(str(path))
     full_text = ""
     
-    # Extract all text
-    for page in reader.pages:
-        text = page.extract_text() or ""
-        full_text += text + "\n"
+    # Extract all text from paragraphs
+    for para in doc.paragraphs:
+        if para.text.strip():
+            full_text += para.text.strip() + "\n"
     
-    # Split into sentences/paragraphs
+    # Split into meaningful paragraphs (not just single lines)
     paragraphs = [p.strip() for p in full_text.split("\n") if len(p.strip()) > 20]
     
     chunks = []
@@ -166,7 +169,7 @@ def improved_chunk_pdf(path: Path, chunk_size: int = 500, overlap: int = 100) ->
             chunks.append(current_chunk.strip())
             # Keep last part for overlap
             words = current_chunk.split()
-            overlap_text = " ".join(words[-overlap:]) if len(words) > overlap else ""
+            overlap_text = " ".join(words[-20:])  # Simplification for overlap
             current_chunk = overlap_text + " " + para
         else:
             current_chunk += " " + para
@@ -179,16 +182,16 @@ def improved_chunk_pdf(path: Path, chunk_size: int = 500, overlap: int = 100) ->
     chunks = [c for c in chunks if len(c) > 50]
     
     pickle.dump(chunks, open(CHUNKS_PKL, "wb"))
-    logger.info(f"Created {len(chunks)} chunks with overlap")
+    logger.info(f"Created {len(chunks)} DOCX chunks with overlap")
     return chunks
 
-# Load PDF chunks
-if PDF_PATH.exists():
-    pdf_chunks = improved_chunk_pdf(PDF_PATH)
-    logger.info(f"Loaded {len(pdf_chunks)} PDF chunks")
+# Load DOCX chunks
+if DOCX_PATH.exists():
+    pdf_chunks = improved_chunk_docx(DOCX_PATH)
+    logger.info(f"Loaded {len(pdf_chunks)} DOCX chunks")
 else:
     pdf_chunks = []
-    logger.warning(f"PDF not found at {PDF_PATH}")
+    logger.warning(f"DOCX not found at {DOCX_PATH}")
 
 # -------------------------
 # IMPROVED EMBEDDINGS
@@ -415,23 +418,22 @@ def ask_openai_with_context(query: str, contexts: List[str]) -> str:
         for i, ctx in enumerate(contexts, 1):
             formatted_context += f"[Context {i}]:\n{ctx}\n\n"
         
-        system_msg = """You are a helpful assistant that answers questions based on provided context.
-
-INSTRUCTIONS:
-1. Answer the question using ONLY the information in the provided contexts
-2. If the contexts contain the answer, provide a clear, complete response
-3. If the answer is partially in the contexts, explain what you found
-4. If the contexts don't contain relevant information, say: "I couldn't find information about that in the available documents."
-5. Be specific and cite which context sections support your answer
-6. If multiple contexts have related information, synthesize them into a coherent answer
+        system_msg = """You are a highly strictly controlled assistant. You MUST follow these rules:
+1. ONLY use information provided in the CONTEXTS sections.
+2. DO NOT use your own internal knowledge, external websites, or reference any other place.
+3. If the answer is not contained within the provided CONTEXTS, explicitly state: "I couldn't find information about that in the available documents."
+4. DO NOT make up any information.
+5. Be concise and direct.
+6. Mention specifically that the information is from the provided document.
 """
         
-        user_msg = f"""CONTEXTS:
+        user_msg = f"""I will provide you with specific contexts from a document. You MUST answer the question using ONLY these contexts.
+
+CONTEXTS:
 {formatted_context}
 
 QUESTION: {query}
-
-Please provide a clear answer based on the contexts above."""
+"""
 
         resp = openai.chat.completions.create(
             model=OPENAI_MODEL,
