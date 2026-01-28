@@ -205,12 +205,244 @@ def handle_msg(message):
         logger.exception(e)
         bot.reply_to(message, "⚠️ Something went wrong.")
 
+# --- HTML Template ---
+HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Bot - Web Interface</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        .chat-header {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            text-align: center;
+        }
+        .chat-header h1 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .chat-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            line-height: 1.5;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .message.user {
+            align-self: flex-end;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+        .message.bot {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            border-bottom-left-radius: 5px;
+        }
+        .message.bot pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .country-selector {
+            display: flex;
+            gap: 10px;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            justify-content: center;
+        }
+        .country-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
+        .country-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .country-btn.active {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .chat-input-container {
+            display: flex;
+            padding: 15px 20px;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .chat-input {
+            flex: 1;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+        .chat-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .send-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .send-btn:hover {
+            transform: scale(1.05);
+        }
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 18px;
+            color: #e0e0e0;
+        }
+        .typing-indicator.show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🏬 Store Bot</h1>
+            <p>Find stores by category in your region</p>
+        </div>
+        <div class="country-selector">
+            <button class="country-btn" data-country="EU">🇪🇺 EU</button>
+            <button class="country-btn" data-country="UK">🇬🇧 UK</button>
+            <button class="country-btn" data-country="USA">🇺🇸 USA</button>
+            <button class="country-btn" data-country="CANADA">🇨🇦 Canada</button>
+        </div>
+        <div class="chat-messages" id="messages">
+            <div class="message bot">Welcome! Please select your country above, then ask me about stores.</div>
+        </div>
+        <div class="typing-indicator" id="typing">Bot is typing...</div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="userInput" placeholder="Ask about stores..." disabled>
+            <button class="send-btn" id="sendBtn" disabled>Send</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedCountry = null;
+        const messagesDiv = document.getElementById('messages');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const typingIndicator = document.getElementById('typing');
+        
+        document.querySelectorAll('.country-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedCountry = btn.dataset.country;
+                userInput.disabled = false;
+                sendBtn.disabled = false;
+                addMessage(`Country set to ${selectedCountry}. How can I help you?`, 'bot');
+            });
+        });
+
+        function addMessage(text, type) {
+            const msg = document.createElement('div');
+            msg.className = `message ${type}`;
+            msg.innerHTML = `<pre>${text}</pre>`;
+            messagesDiv.appendChild(msg);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const text = userInput.value.trim();
+            if (!text || !selectedCountry) return;
+            
+            addMessage(text, 'user');
+            userInput.value = '';
+            sendBtn.disabled = true;
+            typingIndicator.classList.add('show');
+            
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text, country: selectedCountry })
+                });
+                const data = await response.json();
+                addMessage(data.reply, 'bot');
+            } catch (error) {
+                addMessage('Error: Could not get response', 'bot');
+            }
+            
+            typingIndicator.classList.remove('show');
+            sendBtn.disabled = false;
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>
+"""
+
 # --- Flask Routes ---
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Bot is running!"
+    return render_template_string(HTML_TEMPLATE)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
