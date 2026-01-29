@@ -99,13 +99,12 @@ def semantic_search(query: str, top_k: int = 5, similarity_threshold: float = 0.
 def ask_openai_with_context(query: str, contexts: List[str]) -> str:
     try:
         formatted_context = "".join([f"[Context {i+1}]:\n{ctx}\n\n" for i, ctx in enumerate(contexts)])
-        system_msg = """You are a highly strictly controlled assistant. You MUST follow these rules:
+        system_msg = """You are a helpful assistant. You MUST follow these rules:
 1. ONLY use information provided in the CONTEXTS sections.
-2. DO NOT use your own internal knowledge, external websites, or reference any other place.
-3. If the answer is not contained within the provided CONTEXTS, explicitly state: "I couldn't find information about that in the available documents."
-4. DO NOT make up any information.
-5. Be concise and direct.
-6. Mention specifically that the information is from the provided document."""
+2. DO NOT use your own internal knowledge or external websites.
+3. If the answer is not contained within the provided CONTEXTS, simply state that you couldn't find that information.
+4. Answer naturally and concisely.
+5. DO NOT constantly phrase sentences like "According to the document" or "The context mentions". Just give the answer directly."""
         user_msg = f"I will provide you with specific contexts from a document. You MUST answer the question using ONLY these contexts.\n\nCONTEXTS:\n{formatted_context}\nQUESTION: {query}"
         resp = openai.chat.completions.create(
             model=OPENAI_MODEL,
@@ -176,9 +175,9 @@ def match_stores_fuzzy(simple_category: str, country: str) -> List[str]:
 def rank_and_summarize_stores(user_query: str, category: str, country: str, stores: list) -> str:
     if not stores: return ""
     store_text = "\n".join(stores)
-    prompt = f"Rank these most relevant stores (max 10) for query '{user_query}' in category '{category}', country '{country}':\n\n{store_text}"
+    prompt = f"Analyze these stores and return a JSON array of the top 10 most relevant ones for query '{user_query}' (Category: {category}, Country: {country}).\n\nReturn ONLY raw JSON (no markdown formatting, no backticks). Each object must have keys: 'name', 'price_limit', 'item_limit', 'approx_time', 'notes'. If a field is missing, use an empty string.\n\nStores:\n{store_text}"
     try:
-        response = openai.chat.completions.create(model="gpt-4o-mini", messages=[{"role": "system", "content": "You filter and rank stores intelligently."}, {"role": "user", "content": prompt}], max_tokens=500, temperature=0.4)
+        response = openai.chat.completions.create(model="gpt-4o-mini", messages=[{"role": "system", "content": "You are a helpful assistant that outputs JSON."}, {"role": "user", "content": prompt}], max_tokens=1000, temperature=0.4)
         return response.choices[0].message.content.strip()
     except Exception:
         return store_text
@@ -210,8 +209,27 @@ def handle_msg(message):
             cat = classify_category(text)
             stores = match_stores_fuzzy(cat, country)
             if stores:
-                ranked = rank_and_summarize_stores(text, cat, country, stores)
-                bot.reply_to(message, f"🏬 {cat.title()} stores in {country}:\n\n{ranked}")
+                json_str = rank_and_summarize_stores(text, cat, country, stores)
+                try:
+                    # Clean up if OpenAI adds backticks
+                    if json_str.startswith("```"):
+                        json_str = json_str.split("```")[1].strip()
+                        if json_str.startswith("json"): json_str = json_str[4:].strip()
+                    
+                    store_data = json.loads(json_str)
+                    formatted_reply = f"🏬 *{cat.title()} stores in {country}:*\n\n"
+                    for idx, s in enumerate(store_data, 1):
+                        formatted_reply += f"{idx}. *{s.get('name', 'Unknown')}*\n"
+                        if s.get('price_limit'): formatted_reply += f"   💰 Limit: {s['price_limit']}\n"
+                        if s.get('item_limit'): formatted_reply += f"   📦 Items: {s['item_limit']}\n"
+                        if s.get('approx_time'): formatted_reply += f"   ⏱️ Time: {s['approx_time']}\n"
+                        if s.get('notes'): formatted_reply += f"   📝 {s['notes']}\n"
+                        formatted_reply += "\n"
+                    bot.reply_to(message, formatted_reply, parse_mode="Markdown")
+                except Exception as e:
+                    logger.error(f"JSON Parse Error: {e}")
+                    # Fallback if JSON fails
+                    bot.reply_to(message, f"🏬 {cat.title()} stores in {country} (Raw):\n\n{json_str}")
             else:
                 bot.reply_to(message, f"❌ No stores found for {cat} in {country}.")
         elif query_type == "chat":
@@ -376,6 +394,61 @@ HTML_TEMPLATE = """
             color: #e0e0e0;
         }
         .typing-indicator.show { display: block; }
+
+        /* Store Card Styles */
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .store-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 16px;
+            transition: transform 0.2s, background 0.2s;
+            animation: fadeIn 0.4s ease;
+        }
+        .store-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .store-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        .store-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .store-details {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+        .detail-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .detail-icon { opacity: 0.7; }
+        .store-notes {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+        }
     </style>
 </head>
 <body>
@@ -421,8 +494,50 @@ HTML_TEMPLATE = """
         function addMessage(text, type) {
             const msg = document.createElement('div');
             msg.className = `message ${type}`;
-            msg.innerHTML = `<pre>${text}</pre>`;
+            if (type === 'bot') {
+                msg.innerHTML = text; // Allow HTML for bot
+            } else {
+                msg.textContent = text;
+            }
             messagesDiv.appendChild(msg);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function renderStoreList(stores, category, country) {
+            const container = document.createElement('div');
+            container.className = 'message bot';
+            container.style.background = 'transparent';
+            container.style.padding = '0';
+            
+            const title = document.createElement('div');
+            title.innerHTML = `<strong>🏬 ${category.toUpperCase()} stores in ${country}:</strong>`;
+            title.style.marginBottom = '10px';
+            title.style.color = '#e0e0e0';
+            title.style.padding = '0 10px';
+            container.appendChild(title);
+
+            const grid = document.createElement('div');
+            grid.className = 'store-grid';
+
+            stores.forEach(store => {
+                const card = document.createElement('div');
+                card.className = 'store-card';
+                card.innerHTML = `
+                    <div class="store-header">
+                        <span class="store-name">${store.name || 'Unknown Store'}</span>
+                    </div>
+                    <div class="store-details">
+                        ${store.price_limit ? `<div class="detail-row"><span class="detail-icon">💰</span> <span>Limit: ${store.price_limit}</span></div>` : ''}
+                        ${store.item_limit ? `<div class="detail-row"><span class="detail-icon">📦</span> <span>Items: ${store.item_limit}</span></div>` : ''}
+                        ${store.approx_time ? `<div class="detail-row"><span class="detail-icon">⏱️</span> <span>Time: ${store.approx_time}</span></div>` : ''}
+                    </div>
+                    ${store.notes ? `<div class="store-notes">📝 ${store.notes}</div>` : ''}
+                `;
+                grid.appendChild(card);
+            });
+
+            container.appendChild(grid);
+            messagesDiv.appendChild(container);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
 
@@ -442,8 +557,14 @@ HTML_TEMPLATE = """
                     body: JSON.stringify({ message: text, country: selectedCountry })
                 });
                 const data = await response.json();
-                addMessage(data.reply, 'bot');
+                
+                if (data.type === 'store_list') {
+                    renderStoreList(data.data, data.category, data.country);
+                } else {
+                    addMessage(data.reply, 'bot');
+                }
             } catch (error) {
+                console.error(error);
                 addMessage('Error: Could not get response', 'bot');
             }
             
@@ -489,8 +610,15 @@ def chat():
             cat = classify_category(message)
             stores = match_stores_fuzzy(cat, country)
             if stores:
-                ranked = rank_and_summarize_stores(message, cat, country, stores)
-                reply = f"🏬 {cat.title()} stores in {country}:\n\n{ranked}"
+                json_str = rank_and_summarize_stores(message, cat, country, stores)
+                try:
+                    if json_str.startswith("```"):
+                        json_str = json_str.split("```")[1].strip()
+                        if json_str.startswith("json"): json_str = json_str[4:].strip()
+                    store_data = json.loads(json_str)
+                    return jsonify({"type": "store_list", "data": store_data, "category": cat, "country": country})
+                except:
+                    reply = f"🏬 {cat.title()} stores in {country}:\n\n{json_str}"
             else:
                 reply = f"❌ No stores found."
         elif query_type == "chat":
